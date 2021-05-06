@@ -19,10 +19,15 @@ var message=document.querySelector('.message');
      const guess=Number(document.querySelector('.guess').value);
 
     if(score>0){
+       if(guess> 0&&guess<20){ 
 
   if(guess===secreteNumber){
       message.textContent='you are correct';
       number.textContent=secreteNumber;
+      if(score>highscore){
+          highscore=score;
+          displayHighscore.textContent=highscore;
+      }
 
   }else if(guess>secreteNumber){
       message.textContent='you are too high';
@@ -34,9 +39,33 @@ var message=document.querySelector('.message');
       score--;
       displayScore.textContent=score;
   }
-
-    }
     else{
         message.textContent='provide right input';
+    } }
+}else {
+    message.textContent='you lost the Game'
+    number.textContent=secreteNumber;
+
+    secreteNumber=Math.trunc(math.random()*20+1);
+    number.textContent=secreteNumber;
+    score=20;
+    displayScore.textContent=score;
+    document.querySelector('.guess').value='';
+
     }
- })
+ });
+
+
+ btnAgain.addEventListener('click',function(){
+   
+   secreteNumber=Math.trunc(Math.random()*20+1);
+   document.querySelector('.number').value;
+number.textcontent=document.querySelector('.number').value;
+   score=20;
+   displayScore.textContent=score;
+
+   message.textContent='start Guessing';
+   document.querySelector('.guess').value='';
+
+
+ });
