@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
@@ -12,9 +12,9 @@ html {
 }
 
 body {
-  font-family: 'Press Start 2P', sans-serif;
-  color: #eee;
-  background-color:darkolivegreen;
+
+  color: #fff;
+  background-color:hsl(214,47%,23%);
   /* background-color: #60b347; */
 }
 
@@ -34,15 +34,16 @@ main {
 }
 
 .left {
-  width: 52rem;
+width: 52rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 
 .right {
   width: 52rem;
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 /* ELEMENTS STYLE */

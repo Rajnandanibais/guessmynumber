@@ -23,6 +23,7 @@ var message=document.querySelector('.message');
 
   if(guess===secreteNumber){
       message.textContent='you are correct';
+      alert("Congratulation!!!")
       number.textContent=secreteNumber;
       if(score>highscore){
           highscore=score;
@@ -30,11 +31,13 @@ var message=document.querySelector('.message');
       }
 
   }else if(guess>secreteNumber){
-      message.textContent='you are too high';
+      alert("Try a smaller number");
+      message.textContent="you are too high";
       score--;
       displayScore.textContent=score;
 
   }else if(guess < secreteNumber){
+      alert("Try a greater number");
       message.textContent='you are too low';
       score--;
       displayScore.textContent=score;
